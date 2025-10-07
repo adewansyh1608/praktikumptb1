@@ -33,6 +33,6 @@ fun Title(text: String) {
 @Composable
 fun TitlePreview() {
     ShoppingListTheme {
-        Title(text = "Contoh Judul")
+        Title(text = "TEST")
     }
 }

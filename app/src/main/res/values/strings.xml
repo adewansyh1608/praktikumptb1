@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">ShoppingList</string>
-    <string name="search_items">Cari Disini</string>
+    <string name="search_items">Search Here</string>
 
 </resources>
