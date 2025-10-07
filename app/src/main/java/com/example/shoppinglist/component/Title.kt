@@ -1,4 +1,4 @@
-package com.example.shoppinglist.components
+package com.example.shoppinglist.component
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -14,9 +14,9 @@ import androidx.compose.ui.unit.sp
 import com.example.shoppinglist.ui.theme.ShoppingListTheme
 
 @Composable
-fun Title() {
+fun Title(text: String) {
     Text(
-        text = "Shopping List",
+        text = text,
         style = MaterialTheme.typography.headlineLarge.copy(
             fontWeight = FontWeight.Bold,
             fontSize = 32.sp,
@@ -33,6 +33,6 @@ fun Title() {
 @Composable
 fun TitlePreview() {
     ShoppingListTheme {
-        Title()
+        Title(text = "Contoh Judul")
     }
 }

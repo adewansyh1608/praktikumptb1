@@ -1,4 +1,4 @@
-package com.example.shoppinglist.components
+package com.example.shoppinglist.component
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.animateColorAsState
@@ -8,7 +8,14 @@ import androidx.compose.animation.expandVertically
 import androidx.compose.animation.fadeIn
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -55,7 +62,7 @@ fun ShoppingList(items: List<String>) {
 fun AnimatedShoppingListItem(item: String) {
     var isVisible by remember { mutableStateOf(false) }
 
-    // Trigger animasi saat item pertama kali muncul
+
     LaunchedEffect(item) {
         delay(100)
         isVisible = true
@@ -75,7 +82,7 @@ fun ShoppingListItem(item: String) {
     var isSelected by remember { mutableStateOf(false) }
     var isPressed by remember { mutableStateOf(false) }
 
-    // Animasi warna
+
     val backgroundColor by animateColorAsState(
         targetValue = if (isSelected) {
             MaterialTheme.colorScheme.primaryContainer
@@ -98,7 +105,7 @@ fun ShoppingListItem(item: String) {
         label = "contentColor"
     )
 
-    // Animasi elevasi
+
     val elevation by animateDpAsState(
         targetValue = if (isPressed) 12.dp else if (isSelected) 8.dp else 4.dp,
         animationSpec = tween(200),
@@ -196,7 +203,7 @@ fun ShoppingListPreview() {
             modifier = Modifier.fillMaxSize(),
             color = MaterialTheme.colorScheme.background
         ) {
-            ShoppingList(items = listOf("Susu Segar", "Roti Tawar", "Telur Ayam", "Apel Fuji", "Daging Sapi"))
+            ShoppingList(items = listOf("Ultramilk", "Roti Manis", "Ikan", "Anggur", "Semangka"))
         }
     }
 }
