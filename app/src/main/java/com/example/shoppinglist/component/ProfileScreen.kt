@@ -1,5 +1,4 @@
 package com.example.shoppinglist.component
-//
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
